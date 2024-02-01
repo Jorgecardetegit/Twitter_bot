@@ -1,12 +1,18 @@
 import os
 import openai
 import chainlit as cl
+from dotenv import load_dotenv
 
 from langchain import OpenAI, LLMMathChain, SerpAPIWrapper
 from langchain.agents import initialize_agent, Tool, AgentExecutor
 from langchain.chat_models import ChatOpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import load_tools, initialize_agent, AgentType
+
+load_dotenv()
+
+# Accessing an environment variable
+os.getenv('OpenAI_Key')
 
 @cl.on_chat_start
 def start():
