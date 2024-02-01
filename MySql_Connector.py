@@ -1,8 +1,13 @@
+import os 
+from dotenv import load_dotenv
+
 import requests
 import mysql.connector
 from datetime import datetime
 import xml.etree.ElementTree as ET
 import time
+
+load_dotenv()
 
 # Function to insert data into the database
 def insert_paper(title, author, abstract, publication_date, url, keywords):
@@ -10,7 +15,7 @@ def insert_paper(title, author, abstract, publication_date, url, keywords):
     conn = mysql.connector.connect(
         host='localhost',
         user='root',
-        password='Lluvia190202*',
+        password=os.getenv('PASSWORD'),
         database='deep_learning_papers'
     )
     cursor = conn.cursor()
