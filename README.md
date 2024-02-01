@@ -10,7 +10,7 @@ Scheduled Tweets: Configures intervals for tweeting the found articles to ensure
 Engagement Metrics Tracking: Collects basic analytics on tweets (likes, retweets) to gauge the interest in different topics.
 
 ## Getting Started
-Prerequisites
-Python 3.8+
-Twitter Developer Account and API keys
-Access to arXiv API
+- Prerequisites
+- Python 3.8+
+- Twitter Developer Account and API keys
+- Access to arXiv API
